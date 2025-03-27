@@ -14,24 +14,24 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 > 10% functionality, 90% vibes ✌️.
 
-<summary><h2 align="center"> Overview </h2></summary>
+<summary><h2 align="center"> 📋 Overview </h2></summary>
 
-<summary><h3 align="center"> Install Arch </h3></summary>
+<summary><h3 align="center"> ⚙️ Install Arch </h3></summary>
 
-<summary><h3 align="center"> Terminal & Shell </h3></summary>
+<summary><h3 align="center"> 💻 Terminal & Shell </h3></summary>
 
-<summary><h3 align="center"> Hyprland </h3></summary>
+<summary><h3 align="center"> 💧 Hyprland </h3></summary>
 
-<summary><h3 align="center"> Matugen </h3></summary>
+<summary><h3 align="center"> 🎨 Matugen </h3></summary>
 
-<summary><h3 align="center"> Waybar </h3></summary>
+<summary><h3 align="center"> 🧰 Waybar </h3></summary>
 
-<summary><h3 align="center"> Zen Browser </h3></summary>
+<summary><h3 align="center"> 🍃 Zen Browser </h3></summary>
 
-<summary><h3 align="center"> GTK Theme </h3></summary>
+<summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
 
-<summary><h3 align="center"> QT Theme </h3></summary>
+<h1 align="center"> ✨ Screenshots ✨ </h1> 
+> go on, it won't bite (I think 🤔).
 
-<summary><h2 align="center"> Screenshots </h2></summary>
-
-<summary><h2 align="center"> Thank You Mentions </h2></summary>
+<h1 align="center"> ✨ Thank You Section ✨ </h1> 
+> shoutout to the giants whose shoulders I'm standing on 🙏.
