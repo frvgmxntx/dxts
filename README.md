@@ -10,8 +10,26 @@
 </div>
 
 <h1 align="center"> ✨ Introduction ✨ </h1> 
-This repository contains my ***personal*** daily driver setup, customized for a balance between aesthetics and usability. The focus is on creating a smooth, visually appealing experience with glass-like transparency effects and dynamic theming. While built around my own workflow, it's open for anyone who enjoys a polished and fluid environment. Feel free to fork or open a pull request!
+This repository contains my <em>personal</em> daily driver setup, customized for a balance between aesthetics and usability. The focus is on creating a smooth, visually appealing experience with glass-like transparency effects and dynamic theming. While built around my own workflow, it's open for anyone who enjoys a polished and fluid environment. Feel free to fork or open a pull request!
 
 > 10% functionality, 90% vibes ✌️.
 
-<summary><h2 align="center">📋 Overview 📋</h2></summary>
+<summary><h2 align="center"> Overview </h2></summary>
+
+<summary><h3 align="center"> Install Arch </h3></summary>
+
+<summary><h3 align="center"> Terminal & Shell </h3></summary>
+
+<summary><h3 align="center"> Hyprland </h3></summary>
+
+<summary><h3 align="center"> Matugen </h3></summary>
+
+<summary><h3 align="center"> Waybar </h3></summary>
+
+<summary><h3 align="center"> GTK Theme </h3></summary>
+
+<summary><h3 align="center"> QT Theme </h3></summary>
+
+<summary><h2 align="center"> Screenshots </h2></summary>
+
+<summary><h2 align="center"> Thank You Mentions </h2></summary>
