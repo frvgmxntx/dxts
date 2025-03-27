@@ -31,7 +31,15 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 <summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
 
 <h1 align="center"> ✨ Screenshots ✨ </h1> 
-
+<div align="center">
+<img alt="Firewatch Wallpaper" src="./screens/screen-firewatch.gif" width="200" height="200"/>
+</div>
+<div align="center">
+<img alt="Grass Wallpaper" src="./screens/screen-grass.gif" width="200" height="200"/>
+</div>
+<div align="center">
+<img alt="Moon Wallpaper" src="./screens/screen-moon.gif" width="200" height="200"/>
+</div>
 > don't stare for too long or you may be turned to stone! 🐍.
 
 <h1 align="center"> ✨ Thank You Section ✨ </h1> 
