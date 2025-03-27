@@ -32,7 +32,7 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <h1 align="center"> ✨ Screenshots ✨ </h1> 
 
-> go on, but don't stare for too long! 🐍.
+> don't stare for too long or you may be turned to stone! 🐍.
 
 <h1 align="center"> ✨ Thank You Section ✨ </h1> 
 
