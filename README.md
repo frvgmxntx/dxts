@@ -31,7 +31,9 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 <summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
 
 <h1 align="center"> ✨ Screenshots ✨ </h1> 
+
 > go on, it won't bite (I think 🤔).
 
 <h1 align="center"> ✨ Thank You Section ✨ </h1> 
+
 > shoutout to the giants whose shoulders I'm standing on 🙏.
