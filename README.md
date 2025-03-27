@@ -32,14 +32,15 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <h1 align="center"> ✨ Screenshots ✨ </h1> 
 <div align="center">
-<img alt="Firewatch Wallpaper" src="./screens/screen-firewatch.gif" width="200" height="200"/>
+<img alt="Desktop with firewatch wallpaper" src="./screens/screen-firewatch.gif"/>
 </div>
 <div align="center">
-<img alt="Grass Wallpaper" src="./screens/screen-grass.gif" width="200" height="200"/>
+<img alt="Desktop with grass wallpaper" src="./screens/screen-grass.gif"/>
 </div>
 <div align="center">
-<img alt="Moon Wallpaper" src="./screens/screen-moon.gif" width="200" height="200"/>
+<img alt="Desktop with moon wallpaper" src="./screens/screen-moon.gif"/>
 </div>
+
 > don't stare for too long or you may be turned to stone! 🐍.
 
 <h1 align="center"> ✨ Thank You Section ✨ </h1> 
