@@ -13,3 +13,5 @@
 This repository contains my ***personal*** daily driver setup, customized for a balance between aesthetics and usability. The focus is on creating a smooth, visually appealing experience with glass-like transparency effects and dynamic theming. While built around my own workflow, it's open for anyone who enjoys a polished and fluid environment. Feel free to fork or open a pull request!
 
 > 10% functionality, 90% vibes ✌️.
+
+<summary><h2 align="center">📋 Overview 📋</h2></summary>
