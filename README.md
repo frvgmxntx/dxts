@@ -26,6 +26,8 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <summary><h3 align="center"> Waybar </h3></summary>
 
+<summary><h3 align="center"> Zen Browser </h3></summary>
+
 <summary><h3 align="center"> GTK Theme </h3></summary>
 
 <summary><h3 align="center"> QT Theme </h3></summary>
