@@ -3,5 +3,5 @@
 </div>
 <h1 align="center">frvg's .s!</h1>
 <div align="center">
-<img alt="Static Badge" src="https://img.shields.io/badge/Arch_Linux-OS?style=flat-square&label=OS&color=%231793d1"/>
+<img src="https://img.shields.io/badge/OS-Arch%20Linux-1793d1?style=flat-square&logo=linux&logoColor=ffffff" alt="OS" />
 </div>
