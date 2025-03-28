@@ -32,13 +32,19 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <h1 align="center"> ✨ Screenshots ✨ </h1> 
 <div align="center">
-<img alt="Desktop with firewatch wallpaper" src="./screens/screen-firewatch.gif"/>
+<video controls> 
+    <source src="./screens/screen-firewatch.mp4" type="video/mp4>"
+</video>
 </div>
 <div align="center">
-<img alt="Desktop with grass wallpaper" src="./screens/screen-grass.gif"/>
+<video controls> 
+    <source src="./screens/screen-grass.mp4" type="video/mp4>"
+</video>
 </div>
 <div align="center">
-<img alt="Desktop with moon wallpaper" src="./screens/screen-moon.gif"/>
+<video controls> 
+    <source src="./screens/screen-moon.mp4" type="video/mp4>"
+</video>
 </div>
 
 > don't stare for too long or you may be turned to stone! 🐍.
