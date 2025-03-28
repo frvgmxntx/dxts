@@ -34,31 +34,19 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <div align="center">
 
-<video controls> 
-
-    <source src="./screens/screen-firewatch.mp4" type="video/mp4>"
-
-</video>
+<img src="./screens/screen-firewatch.gif" alt="desktop with rainy firewatch game wallpaper"> 
 
 </div>
 
 <div align="center">
 
-<video controls> 
-
-    <source src="./screens/screen-grass.mp4" type="video/mp4>"
-
-</video>
+<img src="./screens/screen-grass.gif" alt="desktop with moving grass wallpaper"> 
 
 </div>
 
 <div align="center">
 
-<video controls> 
-
-    <source src="./screens/screen-moon.mp4" type="video/mp4>"
-
-</video>
+<img src="./screens/screen-moon.gif" alt="desktop with moving moon and clouds illustration wallpaper">
 
 </div>
 
