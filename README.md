@@ -1,7 +1,7 @@
 <div align="center">
 <img alt="Avatar Icon" src="./screens/avatar.png" width="200" height="200"/>
 </div>
-<h1 align="center">frvg's .s!</h1>
+<h1 align="center">frvg's .s! (WIP) </h1>
 <div align="center">
 <img src="https://img.shields.io/badge/OS-Arch%20Linux-1793d1?style=flat-square&logo=linux&logoColor=ffffff" alt="OS" />
 <img src="https://img.shields.io/badge/WM-Hyprland-885A89?style=flat-square&logo=wayland&logoColor=ffffff" alt="WM" />
@@ -32,19 +32,21 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <h1 align="center"> ✨ Screenshots ✨ </h1> 
 <div align="center">
-<video controls> 
-    <source src="./screens/screen-firewatch.mp4" type="video/mp4>"
-</video>
+
+https://github.com/user-attachments/assets/5b1b343c-3326-48e9-9bf9-87c1d1bd634d
+
 </div>
+
 <div align="center">
-<video controls> 
-    <source src="./screens/screen-grass.mp4" type="video/mp4>"
-</video>
+
+https://github.com/user-attachments/assets/6c02539f-f6fc-4730-b0d1-dd9e9eb4d097
+
 </div>
+
 <div align="center">
-<video controls> 
-    <source src="./screens/screen-moon.mp4" type="video/mp4>"
-</video>
+
+https://github.com/user-attachments/assets/042ca0e8-621b-4d97-9b6c-a5f8638d2322
+
 </div>
 
 > don't stare for too long or you may be turned to stone! 🐍.
