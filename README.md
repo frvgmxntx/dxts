@@ -16,7 +16,13 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <summary><h2 align="center"> 📋 Overview </h2></summary>
 
+<details>
+
 <summary><h3 align="center"> ⚙️ Install Arch </h3></summary>
+
+After making the arch iso bootable USB, 
+
+</details>
 
 <summary><h3 align="center"> 💻 Terminal & Shell </h3></summary>
 
@@ -49,8 +55,6 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 <img src="./screens/screen-moon.gif" alt="desktop with moving moon and clouds illustration wallpaper">
 
 </div>
-
-> don't stare for too long or you may be turned to stone! 🐍.
 
 <h1 align="center"> ✨ Thank You Section ✨ </h1> 
 
