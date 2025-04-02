@@ -70,7 +70,7 @@ After making the Arch ISO bootable USB, plug in the notebook and turn it on whil
 
 <h4>
 
-[Matugen](https://github.com/InioX/matugen "give ini a star!") - A material you color generation tool.
+❤️ [Matugen](https://github.com/InioX/matugen "give ini a star!") - A material you color generation tool.
 
 </h4>
 
