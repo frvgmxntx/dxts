@@ -20,7 +20,17 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <summary><h3 align="center"> ⚙️ Install Arch </h3></summary>
 
-After making the arch iso bootable USB, 
+After making the Arch ISO bootable USB, plug in the notebook and turn it on while booting from the pendrive. In the Arch install screen choose instalation.
+
+1. Set the keyboard layout
+2. Set correct time
+3. Connect to the internet
+3. Partition the disk with cfdisk
+    btrfs, with / (@/) and /home (@home) and a SWAP partition (15gb)
+4. Pacstrap core programs (linux stuff, kitty, fish, neovim)
+5. Chroot into the system and symlink keyboard layout, language, and set time
+6. Boot into the system.
+
 
 </details>
 
@@ -57,5 +67,7 @@ After making the arch iso bootable USB,
 </div>
 
 <h1 align="center"> ✨ Thank You Section ✨ </h1> 
+
+<h4> [Matugen](https://github.com/InioX/matugen) - A material you color generation tool.
 
 > shoutout to the giants whose shoulders I'm standing on 🙏.
