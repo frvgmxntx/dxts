@@ -1,0 +1,90 @@
+[config]
+reload_apps = true
+
+[config.reload_apps_list]
+kitty = true
+gtk_theme = true
+
+[config.wallpaper]
+command = "waypaper"
+arguments = ["--wallpaper $wallpaper"]
+set = false
+
+[config.custom_keywords]
+fontfcnf = "FiraCode Nerd Font"
+
+[templates.avatar]
+input_path = './templates/avatar.svg'
+output_path = '~/.config/hypr/avatar.svg'
+
+[templates.cava]
+input_path = './templates/colors-cava'
+output_path = '~/.config/cava/config'
+
+[templates.fish]
+input_path = './templates/colors-fish.theme'
+output_path = '~/.config/fish/themes/Matugen.theme'
+
+[templates.gtk-archdroid-icons]
+input_path = './templates/colors-gtk-icons.sh'
+output_path = '~/.config/hypr/scripts/archdroid-icon-theme/color.sh'
+
+[templates.gtk-materia-assets]
+input_path = './templates/gtk/materia/svg/gtk-3-assets.svg'
+output_path = '~/.config/hypr/scripts/materia-theme/src/gtk-3.0/assets.svg'
+
+[templates.gtk-materia-color]
+input_path = './templates/gtk/materia/_theme-color.scss'
+output_path = '~/.config/hypr/scripts/materia-theme/src/_theme-color.scss'
+
+[templates.hyprland]
+input_path = './templates/colors-hyprland.conf'
+output_path = '~/.config/hypr/colors.conf'
+
+[templates.kitty]
+input_path = './templates/colors-kitty.conf'
+output_path = '~/.config/kitty/colors.conf'
+
+[templates.kvantum]
+input_path = './templates/kvantum/colors-kvlibadwaita.kvconfig'
+output_path = '~/.config/Kvantum/KvLibadwaita/KvLibadwaitaDark.kvconfig'
+
+[templates.kvantum-svg]
+input_path = './templates/kvantum/colors-kvlibadwaita.svg'
+output_path = '~/.config/Kvantum/KvLibadwaita/KvLibadwaitaDark.svg'
+
+[templates.mako]
+input_path = './templates/colors-mako.ini'
+output_path = '~/.config/mako/config'
+
+[templates.mpv]
+input_path = './templates/colors-mpv.conf'
+output_path = '~/.config/mpv/script-opts/uosc.conf'
+
+[templates.neovim]
+input_path = '~/.config/matugen/templates/colors-nvim.vim'
+output_path = '~/.cache/wal/colors-wal.vim'
+
+[templates.satty]
+input_path = './templates/colors-satty.toml'
+output_path = '~/.config/satty/config.toml'
+
+[templates.vesktop]
+input_path = './templates/colors-vesktop.css'
+output_path = '~/.config/vesktop/themes/Material-Discord.theme.css'
+
+[templates.walker]
+input_path = './templates/colors-walker.css'
+output_path = '~/.config/walker/themes/material/colors.css'
+
+[templates.waybar]
+input_path = './templates/colors-waybar.css'
+output_path = '~/.config/waybar/css/colors.css'
+
+[templates.zathura]
+input_path = './templates/colors-zathura'
+output_path = '~/.config/zathura/zathurarc'
+
+[templates.zen-userchrome]
+input_path = './templates/zen-browser/userChrome.css'
+output_path = '~/.zen/x28dekf2.Default (release)/chrome/userChrome.css'

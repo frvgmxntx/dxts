@@ -1,0 +1,28 @@
+@import "/home/frvg/.zen/x28dekf2.Default (release)/chrome/Nebula/Nebula.css";
+
+:root {
+  --toolbar-color: {{colors.primary.default.hex}}ff !important;
+  --toolbar-bgcolor: {{colors.on_primary.default.hex}}b3 !important;
+  --zen-themed-toolbar-bg: {{colors.on_primary.default.hex}}b3 !important;
+  --sidebar-text-color: {{colors.primary.default.hex}}ff !important;
+}
+
+
+  .sidebar-placesTree {
+    background-color: {{colors.on_primary.default.hex}}59 !important;
+  }
+  #TabsToolbar {
+    background-color: {{colors.on_primary.default.hex}}59 !important;
+  }
+
+  body:has([zen-compact-mode="true"]) #titlebar {
+    background: {{colors.on_primary.default.hex}}59 !important;
+  }
+
+
+  #browser {
+      background: {{colors.on_primary.default.hex}}59 !important; /* Increased opacity */
+  }
+  browser[transparent='true'] {
+    background: {{colors.on_primary.default.hex}}59 !important;
+  }
