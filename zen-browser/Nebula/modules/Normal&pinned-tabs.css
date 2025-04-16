@@ -1,0 +1,51 @@
+/* === NORMAL TAB CUSTOMIZATION ============================================================================================ */
+
+/* Hides the splitter/resize bar, but still functional */
+#zen-sidebar-splitter {
+    opacity: 0 !important;
+    border: none !important;
+  }
+  
+  /* Common pointer events */
+  .titlebar-buttonbox-container,
+  .titlebar-buttonbox,
+  .titlebar-button,
+  #urlbar,
+  #urlbar-input,
+  .urlbarView-body-outer,
+  .urlbarView-body-inner {
+    pointer-events: auto !important;
+  }
+  
+  /* Smooth cubic-bezier transition for tab background with a slight "overshoot" effect */
+  .tabbrowser-tab .tab-background {
+    transition: background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+    box-shadow: none !important;
+  }
+  
+  @media (-moz-bool-pref: "lacuna.tab.pined-tabs-bg") {
+    .tabbrowser-tab[pinned]:not([zen-essential="true"]) .tab-background {
+      background-color: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)) !important;
+      transition: background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+    }
+  
+    .tabbrowser-tab[pinned]:not([zen-essential="true"]):hover .tab-background {
+      background-color: light-dark(rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.45)) !important;
+    }
+  }
+  
+  /* When tabs are selected/active */
+  .tabbrowser-tab[selected] .tab-background,
+  .tabbrowser-tab[multiselected] .tab-background {
+    background-color: light-dark(
+      color-mix(in srgb, #fefefe 45%, transparent),
+      color-mix(in srgb, #000000 35%, transparent)
+    ) !important;
+    transition: background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+  }
+  
+  /* Close icon hover effect with the same "overshoot" transition */
+  .close-icon:hover {
+    transition: background-color 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+    background-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+  }
