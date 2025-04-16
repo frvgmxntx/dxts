@@ -1,0 +1,39 @@
+{
+  "custom/tools-icon": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "custom/backup-dots": {
+    "format": "󰉙",
+    "on-click": "~/.config/hypr/scripts/bkp-dots.sh",
+    "tooltip": false,
+  },
+
+  "custom/screenrecord": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/screenrecord.sh",
+    "tooltip": false,
+  },
+
+  "custom/wallpaper": {
+    "format": "󰟾",
+    "on-click": "~/.config/matugen/post_hooks.sh",
+    "tooltip": false,
+  },
+
+  "group/tools": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tools-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/tools-icon", 
+      "custom/wallpaper",
+      "custom/screenrecord",
+      "custom/backup-dots",
+    ],
+  },
+}

@@ -1,0 +1,41 @@
+@import "./colors.css";
+
+#workspaces {
+  margin: 0rem 0rem; 
+  padding: 0.4rem 1rem;
+  font-size: 0.6rem;
+  background-color: alpha(@on_primary, 0.35);
+  border-radius: 1.5rem; 
+}
+
+#workspaces button {
+  background: alpha(@primary, 0.5);
+  border-radius: 1.5rem;
+  margin: 0.1rem 0.2rem;
+  min-width: 0.8rem;
+  color: transparent;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#workspaces button.active {
+  min-width: 2rem;
+  background: alpha(@primary, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#workspaces button.empty {
+  background: alpha(@primary, 0.3);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#workspaces button:hover {
+  background: alpha(@primary_fixed_dim, 1);
+  min-width: 2rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#workspaces button.empty:hover {
+  background: alpha(@primary_fixed_dim, 1);
+  min-width: 2rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}

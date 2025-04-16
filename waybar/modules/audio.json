@@ -1,0 +1,30 @@
+{
+  "wireplumber": {
+    "format": "{icon}",
+    "format-icons": [""],
+    "format-muted": "",
+    "tooltip": false,
+  },
+  
+  "wireplumber#volume": {
+    "format": "{volume}%",
+    "format-muted": "",
+    "on-click": "pwvucontrol",
+    "tooltip": false,
+  },
+
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "audio-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "wireplumber",
+      "wireplumber#volume",
+    ],
+  },
+
+
+}

@@ -1,0 +1,11 @@
+{
+  "include": [ 
+    "~/.config/waybar/modules/bluetooth.json",
+    "~/.config/waybar/modules/clock.json", 
+    "~/.config/waybar/modules/power.json",  
+    "~/.config/waybar/modules/tray.json",
+    "~/.config/waybar/modules/system.json",
+    "~/.config/waybar/modules/window.json",
+    "~/.config/waybar/modules/workspaces.json",
+  ],
+}

@@ -1,0 +1,73 @@
+@import "./colors.css";
+
+#custom-resources-icon {
+  margin: 0rem 1rem 0rem 0.5rem;
+  color: alpha(@primary_fixed, 0.5);
+  font-size: 0.85rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#custom-resources-icon:hover {
+  color: alpha(@primary_fixed, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#temperature {
+  margin: 0rem 0rem 0rem 0.5rem;
+  color: alpha(@on_surface, 0.5);
+  font-size: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#temperature:hover {
+  color: alpha(@on_surface, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#memory {
+  margin: 0rem 0rem 0rem 0.5rem;
+  color: alpha(@on_surface, 0.5);
+  font-size: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#memory:hover {
+  color: alpha(@on_surface, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#disk {
+  margin: 0rem 0rem 0rem 0.5rem;
+  color: alpha(@on_surface, 0.5);
+  font-size: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#disk:hover {
+  color: alpha(@on_surface, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#cpu {
+  margin: 0rem 0rem 0rem 0.5rem;
+  color: alpha(@on_surface, 0.5);
+  font-size: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#cpu:hover {
+  color: alpha(@on_surface, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#backlight {
+  margin: 0rem 0rem 0rem 0.5rem;
+  color: alpha(@on_surface, 0.5);
+  font-size: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#backlight:hover {
+  color: alpha(@on_surface, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}

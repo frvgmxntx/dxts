@@ -1,0 +1,31 @@
+{
+  "battery": {
+    "format": "{icon}",
+    "format-icons": ["","","","",""],
+    "states": {
+      "mid": 30,
+      "low": 10,
+    },
+    "tooltip": false,
+  },
+
+  "battery#charge": {
+    "format-discharging": "{capacity}%",
+    "format-charging": "{capacity}% ",
+    "tooltip": false,
+  },
+
+  "group/battery": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "battery-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "battery",
+      "battery#charge",
+    ],
+  },
+
+}

@@ -1,0 +1,26 @@
+{
+  "hyprland/window": {
+    "format": "{title}",
+    "rewrite": {
+      "(.*)~(.*)": " terminal",
+      "(.*)Discord(.*)": "  discord",
+      "(.*)fish(.*)": " terminal",
+      "(.*)kitty(.*)": " terminal",
+      "(.*)Lutris(.*)": "󰊗 lutris",
+      "(.*).pdf(.*)": "󰈦 zathura",
+      "(.*)Pipewire(.*)": "󰗅 pwvucontrol",
+      "(.*).py": " python",
+      "(.*)qBittorrent(.*)": " qbittorrent",
+      "(.*)mpv": "󰿎 mpv",
+      "(.*)Starbound(.*)": " starbound",
+      "steam": " steam",
+      "(.*)Stremio(.*)": "󰿎 stremio",
+      "(.*)Thunar(.*)": "󰉋 thunar",
+      "(.*)vesktop(.*)": "  discord",
+      "(.*)Wine(.*)": " wine",
+      "(.*)zathura(.*)": "󰈦 zathura",
+      "(.*)Zen Browser(.*)": "󰈹 zen",
+    },
+    "tooltip": false,
+  },
+}

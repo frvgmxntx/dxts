@@ -1,0 +1,24 @@
+@import "./colors.css";
+
+#network {
+  margin: 0rem 0.5rem 0rem 0rem;
+  color: alpha(@primary, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#network:hover {
+  color: alpha(@primary, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#network.name {
+  margin: 0rem 0.5rem 0rem 0rem;
+  font-size: 0.75rem;
+  color: alpha(@primary, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#network.name:hover {
+  color: alpha(@primary, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}

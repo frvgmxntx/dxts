@@ -1,0 +1,28 @@
+{
+  "network": {
+    "format": "{icon}",
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "format-ethernet": "",
+    "format-disconnected": "󰤮",
+    "tooltip": false,
+  },
+
+  "network#name": {
+    "format": "{signalStrength}%",
+    "on-click": "kitty -e nmtui",
+    "tooltip": false,
+  },
+
+  "group/network": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "network-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "network",
+      "network#name",
+    ],
+  },
+}

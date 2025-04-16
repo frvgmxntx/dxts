@@ -1,0 +1,12 @@
+{
+  "hyprland/workspaces": { 
+    "all-output": false,
+    "move_to_monitor": true,
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+    }
+  }
+}

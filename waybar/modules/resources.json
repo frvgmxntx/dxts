@@ -1,0 +1,52 @@
+{
+  "custom/resources-icon": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰌶","󰌵"],
+    "tooltip": false,
+  },
+
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "tooltip": false,
+  },
+
+  "disk": {
+    "format": "󱛟 {percentage_used}%",
+    "tooltip": false,
+  },
+
+  "memory": {
+    "format": " {percentage}%",
+    "tooltip": false,
+  },
+
+  "temperature": {
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["","","","",""],
+    "tooltip": false,
+  },
+
+  "group/resources": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "resources-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/resources-icon",
+      "backlight",
+      "cpu",
+      "disk",
+      "memory",
+      "temperature",
+    ],
+  },
+
+  
+}

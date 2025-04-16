@@ -1,0 +1,40 @@
+{
+  "custom/power-icon": {
+    "format": "⏻",
+    "tooltip": false,
+  },
+
+  "custom/poweroff": {
+    "format": "󰍶",
+    "on-click": "systemctl poweroff",
+    "tooltip": false,
+  },
+
+  "custom/reboot": {
+    "format": "󱍸",
+    "on-click": "systemctl reboot",
+    "tooltip": false,
+  },
+
+  "custom/suspend": {
+    "format": "󰠠",
+    "on-click": "systemctl hibernate",
+    "tooltip": false,
+  },
+
+  "group/power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "power-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/power-icon",
+      "custom/poweroff",
+      "custom/reboot",
+      "custom/suspend",
+    ],
+  },
+
+}

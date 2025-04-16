@@ -1,0 +1,29 @@
+{
+  "bluetooth": {
+	"format": "󰂯",
+	"format-disabled": "󰂲",
+	"format-connected": "󰂱",
+	"tooltip": false,
+  },
+
+  "bluetooth#device": {
+	"format": "disconnected",
+	"format-connected": "{device_alias}",
+	"on-click": "blueman-manager",	
+	"tooltip": false,
+  },
+
+  "group/bluetooth": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "bluetooth-child",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "bluetooth",
+      "bluetooth#device",
+    ],
+  },
+
+}

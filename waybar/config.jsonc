@@ -1,0 +1,25 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin": "5 10 0 10",
+  "name": "bar-top",
+  "exclusive": "true",
+  "fixed-center": true,
+  "passthrough": false,
+  "reload_style_on_change": true,
+  "include": ["~/.config/waybar/modules/global.json"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window",
+  ],
+  "modules-center": [
+    "clock",
+  ],
+  "modules-right": [
+    "group/bluetooth",
+    "group/tray",
+    "group/system",
+    "group/tools",
+    "group/power",
+  ],
+}

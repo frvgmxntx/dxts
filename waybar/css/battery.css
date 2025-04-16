@@ -1,0 +1,47 @@
+@import "./colors.css";
+
+#battery {
+  margin: 0rem 0.25rem 0rem 0rem;
+  padding: 0rem 0.25rem 0rem 0.25rem;
+  font-size: 1.1rem;
+  color: alpha(@primary, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#battery:hover {
+  color: alpha(@primary, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#battery.mid {
+  color: alpha(@tertiary, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#battery.mid:hover {
+  color: alpha(@tertiary, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#battery.low {
+  color: alpha(@error, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#battery.low:hover {
+  color: alpha(@error, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#battery.charge {
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0.25rem;
+  font-size: 0.75rem;
+  color: alpha(@primary, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#battery.charge:hover {
+  color: alpha(@primary, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}

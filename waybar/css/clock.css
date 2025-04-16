@@ -1,0 +1,14 @@
+@import "./colors.css";
+
+#clock {
+  color: alpha(@primary, 0.5);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+  padding: 0 1rem;
+  background-color: alpha(@on_primary, 0.35);
+  border-radius: 1.5rem;
+}
+
+#clock:hover {
+  color: alpha(@primary, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}

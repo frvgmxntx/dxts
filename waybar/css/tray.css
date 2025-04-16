@@ -1,0 +1,44 @@
+@import "./colors.css";
+
+#custom-tray-icon {
+  padding: 0rem 0.8rem 0rem 0.3rem; 
+  font-size: 1.15rem;
+  color: alpha(@primary, 0.5);
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#custom-tray-icon:hover {
+  color: alpha(@primary, 1);
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#tray {
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  padding: 0rem 0.1rem 0rem 0.3rem;
+  background-color: alpha(@on_primary, .35);
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
+}
+
+#tray > .active {
+  background-color: alpha(@on_primary, 0);
+}
+
+#tray > .passive {
+  background-color: alpha(@on_primary, 0);
+}
+
+#tray > .needs-attention {
+  background-color: alpha(@on_primary, 0);
+}
+
+#tray menu {
+  padding: 0.7rem 0.7rem;
+  font-size: 0.85rem;
+  background: alpha(@on_primary, 0.9);
+  border-radius: 1.5rem;
+  color: alpha(@primary, 1);
+}
+
+

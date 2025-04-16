@@ -1,0 +1,22 @@
+{
+
+  "include": [
+    "~/.config/waybar/modules/audio.json",
+    "~/.config/waybar/modules/battery.json",
+    "~/.config/waybar/modules/network.json",
+    "~/.config/waybar/modules/tools.json",
+  ],
+
+  "group/system": {
+    "orientation": "inherit",
+    "modules": [
+      "network",
+      "network#name",
+      "wireplumber",
+      "wireplumber#volume",
+      "battery",
+      "battery#charge",
+    ],
+  },
+
+}

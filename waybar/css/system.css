@@ -1,0 +1,8 @@
+@import "./colors.css";
+
+#system {
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  padding: 0rem 0.5rem;
+  background-color: alpha(@on_primary, .35);
+  border-radius: 1.5rem;
+}
