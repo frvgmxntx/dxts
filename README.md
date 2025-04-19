@@ -22,6 +22,36 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 > did you read the word ***personal*** in the intro?
 
+After making the Arch ISO bootable USB, plug in the notebook and turn it on while booting from the pendrive. In the Arch install screen choose instalation.
+
+1. Set the keyboard layout
+2. Set correct time
+3. Connect to the internet
+4. Partition the disk with cfdisk btrfs, with / (@/) and /home (@home) and a SWAP partition (16gb)
+5. Pacstrap core programs (linux stuff, kitty, fish, neovim)
+6. Chroot into the system and symlink keyboard layout, language, and set time
+7. Boot into the system.
+8. pacman mirror
+8. Bluetooth
+9. Polkit
+10. multilib repo
+11. nvidia
+12. paru
+13. nbfc-linux
+14. hyprland
+15. uwsm
+14. xdg-desktop-portal
+15. zathura
+16. zen-browser & transparent-zen
+
+<h4 align="center"> Programs </h4>
+pacstrap
+amd-ucode app2unit-git base-devel fish git kitty linux linux-firmware linux-lts neovim network-manager noto-fonts-emoji nvidia nvidia-utils pipewire pipewire-alsa pipewire-jack pipewire-pulse sudo uwsm
+other
+7zip bat blueman bluez bluez-libs bluez-utils brightnessctl cava dart-sass fastfetch ffmpeg ffmpegthumbnailer file-roller gimp github-cli glances google-earth-pro gpu-screen-recorder grim gvfs hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nbfc-linux poppler pwvucontrol python qbittorrent rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tree-sitter ttf-firacode-nerd tumbler tumbler-extra-thumbnailers udiskie unrar vesktop-bin walker-bin wine winetricks wireplumber wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zen-browser-bin zoxide
+
+
+
 </details>
 
 <summary><h3 align="center"> 💻 Terminal & Shell </h3></summary>
@@ -36,7 +66,7 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 <summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
 
-<h1 align="center"> ✨ Screenshots ✨ </h1> 
+<h1 align="center"> ✨ Showcase ✨ </h1> 
 
 <div align="center">
 
