@@ -105,18 +105,9 @@ other
 
 <summary><h3 align="center"> 🧰 Waybar </h3></summary>
 
-
 <summary><h3 align="center"> 🍃 Zen Browser </h3></summary>
 
-
-<details>
-
 <summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
-
-
-_comming soon_
-
-<details>
 
 <h1 align="center"> ✨ Showcase ✨ </h1>
 
