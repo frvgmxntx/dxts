@@ -9,7 +9,7 @@
 <img src="https://img.shields.io/badge/Made%20With-Love-EB5E55?style=flat-square&logo=macys&logoColor=ffffff" alt="Made with" />
 </div>
 
-<h1 align="center"> ✨ Introduction ✨ </h1> 
+<h1 align="center"> ✨ Introduction ✨ </h1>
 This repository contains my <em>personal</em> daily driver setup, customized for a balance between aesthetics and usability. The focus is on creating a smooth, visually appealing experience with glass-like transparency effects and dynamic theming. While built around my own workflow, it's open for anyone who enjoys a polished and fluid environment. Feel free to fork or open a pull request!
 
 > 10% functionality, 90% vibes ✌️.
@@ -22,12 +22,53 @@ This repository contains my <em>personal</em> daily driver setup, customized for
 
 > did you read the word ***personal*** in the intro?
 
-After making the Arch ISO bootable USB, plug in the notebook and turn it on while booting from the pendrive. In the Arch install screen choose instalation.
+After making the Arch ISO bootable USB, plug in the notebook and turn it on while booting from the pendrive. In the Arch screen choose installation.
 
 1. Set the keyboard layout
-2. Set correct time
-3. Connect to the internet
-4. Partition the disk with cfdisk btrfs, with / (@/) and /home (@home) and a SWAP partition (16gb)
+
+```
+$ localectl list-keymaps	# will list all keymaps
+$ loadkeys KEYMAP		# will load selected keymap
+$ setfont ter-132b		# will set a font suitable for HiDPI screen
+```
+
+2. Connect to the internet
+
+```
+$ iwctl
+[iwd]$ device list				# get wireless device name
+[iwd]$ device DEVICE set-property Powered on	# turn device on
+[iwd]$ station DEVICE scan			# turn scan on
+[iwd]$ station DEVICE get-networks		# list networks
+[iwd]$ station DEVICE connect NETWORK		# connect to network
+[iwd]$ exit					# to exit
+```
+3. Set correct time
+
+```
+$ timedatectl list-timezones		# list timezones
+$ timedatectl set-timezone TIMEZONE	# set timezone
+$ timedatectl status			# check current RTC mode
+$ timedatectl set-local-rtc BOOL	# change RTC mode (set as UTC)
+$ timedatectl set-ntp BOOL		# start time sync daemon
+```
+
+4. Partition the disk and mount it
+
+```
+$ cfdisk	# will start the fdisk TUI
+```
+
+- delete all existing partitions
+- create one for root and another for the efi, then a subvolume for root and home
+```
+---- /boot/efi
+---- /
+     |-> /@
+     |-> /@home
+```
+
+
 5. Pacstrap core programs (linux stuff, kitty, fish, neovim)
 6. Chroot into the system and symlink keyboard layout, language, and set time
 7. Boot into the system.
@@ -42,13 +83,15 @@ After making the Arch ISO bootable USB, plug in the notebook and turn it on whil
 15. uwsm
 14. xdg-desktop-portal
 15. zathura
-16. zen-browser & transparent-zen
+16. zed
+17. ollama
+18. zen-browser & transparent-zen
 
 <h4 align="center"> Programs </h4>
 pacstrap
 amd-ucode app2unit-git base-devel fish git kitty linux linux-firmware linux-lts neovim network-manager noto-fonts-emoji nvidia nvidia-utils pipewire pipewire-alsa pipewire-jack pipewire-pulse sudo uwsm
 other
-7zip bat blueman bluez bluez-libs bluez-utils brightnessctl cava dart-sass fastfetch ffmpeg ffmpegthumbnailer file-roller gimp github-cli glances google-earth-pro gpu-screen-recorder grim gvfs hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nbfc-linux poppler pwvucontrol python qbittorrent rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tree-sitter ttf-firacode-nerd tumbler tumbler-extra-thumbnailers udiskie unrar vesktop-bin walker-bin wine winetricks wireplumber wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zen-browser-bin zoxide
+7zip bat blueman bluez bluez-libs bluez-utils brightnessctl cava dart-sass fastfetch ffmpeg ffmpegthumbnailer file-roller gimp github-cli glances google-earth-pro gpu-screen-recorder grim gvfs hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nbfc-linux nm-connection-editor ollama poppler pwvucontrol python qbittorrent rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tree-sitter ttf-firacode-nerd tumbler tumbler-extra-thumbnailers udiskie unrar vesktop-bin walker-bin wine winetricks wireplumber wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zed zen-browser-bin zoxide
 
 
 
@@ -62,21 +105,30 @@ other
 
 <summary><h3 align="center"> 🧰 Waybar </h3></summary>
 
+
 <summary><h3 align="center"> 🍃 Zen Browser </h3></summary>
+
+
+<details>
 
 <summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
 
-<h1 align="center"> ✨ Showcase ✨ </h1> 
+
+_comming soon_
+
+<details>
+
+<h1 align="center"> ✨ Showcase ✨ </h1>
 
 <div align="center">
 
-<img src="./screens/screen-firewatch.gif" alt="desktop with rainy firewatch game wallpaper"> 
+<img src="./screens/screen-firewatch.gif" alt="desktop with rainy firewatch game wallpaper">
 
 </div>
 
 <div align="center">
 
-<img src="./screens/screen-grass.gif" alt="desktop with moving grass wallpaper"> 
+<img src="./screens/screen-grass.gif" alt="desktop with moving grass wallpaper">
 
 </div>
 
@@ -86,7 +138,7 @@ other
 
 </div>
 
-<h1 align="center"> ✨ Thank You Section ✨ </h1> 
+<h1 align="center"> ✨ Thank You Section ✨ </h1>
 
 <h4>
 

@@ -9,7 +9,7 @@
 
   "network#name": {
     "format": "{signalStrength}%",
-    "on-click": "kitty -e nmtui",
+    "on-click": "nm-connection-editor",
     "tooltip": false,
   },
 

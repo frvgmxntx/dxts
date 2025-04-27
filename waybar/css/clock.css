@@ -6,6 +6,7 @@
   padding: 0 1rem;
   background-color: alpha(@on_primary, 0.35);
   border-radius: 1.5rem;
+  font-size: 0.9rem;
 }
 
 #clock:hover {
