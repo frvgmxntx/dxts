@@ -56,36 +56,110 @@ $ timedatectl set-ntp BOOL		# start time sync daemon
 4. Partition the disk and mount it
 
 ```
-$ cfdisk	# will start the fdisk TUI
+$ cfdisk # will start the fdisk TUI
 ```
 
-- delete all existing partitions
-- create one for root and another for the efi, then a subvolume for root and home
+- delete all existing partitions.
+- create one for the EFI, another for root and one for the swap space.
+- now it's time format all partitions, get the paths with:
 ```
----- /boot/efi
----- /
-     |-> /@
-     |-> /@home
+$ fdisk -l
+```
+- for each path, format it as needed
+```
+$ mkfs.fat -F 32 /dev/PATH_TO_EFI
+$ mkfs.btrfs /dev/PATH_TO_ROOT
+$ mkswap /dev/PATH_TO_SWAP
+```
+- mount each partition and enable swap
+```
+$ mount /dev/PATH_TO_ROOT /mnt
+$ mkdir /mnt/boot
+$ mount /dev/PATH_TO_EFI /mnt/boot/
+$ swapon /dev/PATH_TO_SWAP
+```
+- also create the subvolumes
+```
+$ btrfs su cr /mnt/@		# root subvolume
+$ btrfs su cr /mnt/@home	# home subvolume
+$ btrfs su cr /mnt/@snapshots	# snapshot subvolume
+$ btrfs su cr /mnt/@log		# logs subvolume
+$ btrfs su cr /mnt/@pkg		# pacman subvolume
+```
+- now unmount everything and remount with the subvolumes.
+```
+$ umount /mnt
+
+# root
+$ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@ /dev/PATH_TO_ROOT /mnt
+
+# create the directories to be mounted
+$ mkdir -p /mnt/{boot,home,.snapshots}
+$ mkdir -p /mnt/var/log
+$ mkdir -p /mnt/var/pacman/pkg
+
+# mount the subvolumes
+$ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@home /dev/PATH_TO_ROOT /mnt/home
+$ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@snapshots /dev/PATH_TO_ROOT /mnt/.snapshots
+$ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@log /dev/PATH_TO_ROOT /mnt/var/log
+$ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@pkg /dev/PATH_TO_ROOT /mnt/pkg
+
+# mount the EFI
+$ mount /dev/PATH_TO_EFI /mnt/boot
+
+# enable SWAP
+$ swapon /dev/PATH_TO_SWAP
 ```
 
+- finally, is time to pacstrap core stuff
 
-5. Pacstrap core programs (linux stuff, kitty, fish, neovim)
+> best time to act like a wizard summoning an esoteric spell
+
+```
+$ pacstrap /mnt amd-ucode base base-devel btrfs-progs git linux linux-firmware linux-headers linux-lts neovim networkmanager reflector sudo
+```
+
+- now generate the fstab entries
+
+```
+$ genfstab -U /mnt >> /mnt/etc/fstab
+
+# also check if everything is alright
+$ cat /mnt/etc/fstab
+```
+
+- enter the installation directory
+> aka doot doot the chroot
+
+```
+$ arch-chroot /mnt
+```
+
+- now set the zone info
+
+```
+
+```
+
 6. Chroot into the system and symlink keyboard layout, language, and set time
 7. Boot into the system.
 8. pacman mirror
-8. Bluetooth
-9. Polkit
-10. multilib repo
-11. nvidia
-12. paru
-13. nbfc-linux
-14. hyprland
-15. uwsm
-14. xdg-desktop-portal
-15. zathura
-16. zed
-17. ollama
-18. zen-browser & transparent-zen
+9. acer-wmi-battery
+10. schedule fstrim
+11. Bluetooth
+12. Polkit
+13. multilib repo
+14. nvidia
+15. paru
+16. nbfc-linux
+17. hyprland
+18. uwsm
+19. xdg-desktop-portal
+20. zathura
+21. zed
+22. ollama
+23. zen-browser & transparent-zen
+24. snapper snap-sync
 
 <h4 align="center"> Programs </h4>
 pacstrap
