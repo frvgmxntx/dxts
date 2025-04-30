@@ -59,8 +59,8 @@ $ timedatectl set-ntp BOOL		# start time sync daemon
 $ cfdisk # will start the fdisk TUI
 ```
 
-- delete all existing partitions.
-- create one for the EFI, another for root and one for the swap space.
+- delete all existing partitions
+- create one for the EFI, another for root and one for the swap space
 - now it's time format all partitions, get the paths with:
 ```
 $ fdisk -l
@@ -86,7 +86,7 @@ $ btrfs su cr /mnt/@snapshots	# snapshot subvolume
 $ btrfs su cr /mnt/@log		# logs subvolume
 $ btrfs su cr /mnt/@pkg		# pacman subvolume
 ```
-- now unmount everything and remount with the subvolumes.
+- now unmount everything and remount with the subvolumes
 ```
 $ umount /mnt
 
@@ -111,7 +111,7 @@ $ mount /dev/PATH_TO_EFI /mnt/boot
 $ swapon /dev/PATH_TO_SWAP
 ```
 
-- finally, is time to pacstrap core stuff
+Finally, is time to pacstrap core stuff.
 
 > best time to act like a wizard summoning an esoteric spell
 
@@ -119,7 +119,7 @@ $ swapon /dev/PATH_TO_SWAP
 $ pacstrap /mnt amd-ucode base base-devel btrfs-progs git linux linux-firmware linux-headers linux-lts neovim networkmanager reflector sudo
 ```
 
-- now generate the fstab entries
+Also generate the fstab entries.
 
 ```
 $ genfstab -U /mnt >> /mnt/etc/fstab
@@ -128,18 +128,34 @@ $ genfstab -U /mnt >> /mnt/etc/fstab
 $ cat /mnt/etc/fstab
 ```
 
-- enter the installation directory
-> aka doot doot the chroot
+Enter the installation directory to setup the system.
 
 ```
 $ arch-chroot /mnt
 ```
 
-- now set the zone info
+1. Set the timezone and sync the clock.
 
 ```
+$ ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+$ hwclock --systohc
+```
+2. Generate the locales info.
 
 ```
+# find and uncomment en_US.UTF-8
+$ nvim /etc/locale.gen
+# then run
+$ locale-gen
+
+```
+- now edit /etc/locale.conf to become
+```
+LANG=en_US.UTF-8
+```
+
+
+
 
 6. Chroot into the system and symlink keyboard layout, language, and set time
 7. Boot into the system.
