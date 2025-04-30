@@ -140,6 +140,7 @@ $ arch-chroot /mnt
 $ ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 $ hwclock --systohc
 ```
+
 2. Generate the locales info.
 
 ```
@@ -147,18 +148,93 @@ $ hwclock --systohc
 $ nvim /etc/locale.gen
 # then run
 $ locale-gen
-
 ```
 - now edit /etc/locale.conf to become
 ```
 LANG=en_US.UTF-8
 ```
+- also edit /etc/vconsole.conf
+```
+KEYMAP=us
+```
 
+3. Add btrfs module to kernel by editing /etc/mkinitcpio.conf.
+```
+...
+MODULES=(btrfs)
+...
+```
+- then run
+```
+$ mkinitcpio -p linux
+```
 
+4. Set the host name by editing /etc/hostname.
+```
+nitro-arch
+```
+- also edit /etc/hosts
+```
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	nitro-arch.localdomain	nitroarch
+```
 
+5. Add sudo password.
+```
+$ passwd
+```
 
-6. Chroot into the system and symlink keyboard layout, language, and set time
-7. Boot into the system.
+6. Install the bootloader.
+```
+$ bootctl --path=/boot install
+```
+- now edit the /boot/loader.conf file
+```
+timeout 0
+console-mode auto
+editor no
+default arch-*
+```
+- create the /boot/loader/entries/arch.conf file
+```
+title	Arch Linux
+linux	/vmlinuz-linux
+initrd	/initramfs-linux.img
+options	root=/dev/PATH_TO_ROOT rw
+```
+
+7. Get more packages.
+```
+$ pacman -S --needed bluez bluez-utils efibootmgr nm-connection-editor snapper wpa_supplicant xdg-utils xdg-user-dirs
+```
+
+8. Enable networkmanager.
+```
+$ systemctl enable NetworkManager
+```
+
+9. Create a new user.
+```
+$ useradd -mG wheel frvg
+$ passwd frvg
+```
+- now add the user to the sudoers, first run
+```
+$ EDITOR=nvim visudo
+```
+- then uncomment the line
+```
+%wheel ALL=(ALL) ALL
+```
+
+10. Boot into the system.
+```
+$ exit
+$ umount -a
+$ reboot
+```
+
 8. pacman mirror
 9. acer-wmi-battery
 10. schedule fstrim
