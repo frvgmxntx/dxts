@@ -68,7 +68,7 @@ $ fdisk -l
 - for each path, format it as needed
 ```
 $ mkfs.fat -F 32 /dev/PATH_TO_EFI
-$ mkfs.btrfs /dev/PATH_TO_ROOT
+$ mkfs.btrfs /dev/PATH_TO_ROOT # or mkfs.xfs
 $ mkswap /dev/PATH_TO_SWAP
 ```
 - mount each partition and enable swap
@@ -78,7 +78,7 @@ $ mkdir /mnt/boot
 $ mount /dev/PATH_TO_EFI /mnt/boot/
 $ swapon /dev/PATH_TO_SWAP
 ```
-- also create the subvolumes
+- also create the subvolumes (btrfs only)
 ```
 $ btrfs su cr /mnt/@		# root subvolume
 $ btrfs su cr /mnt/@home	# home subvolume
@@ -90,7 +90,7 @@ $ btrfs su cr /mnt/@pkg		# pacman subvolume
 ```
 $ umount /mnt
 
-# root
+# root (if btrfs)
 $ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@ /dev/PATH_TO_ROOT /mnt
 
 # create the directories to be mounted
@@ -104,6 +104,9 @@ $ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@snapshots /dev/PAT
 $ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@log /dev/PATH_TO_ROOT /mnt/var/log
 $ mount -o noatime,compress=zstd:1,ssd,space_cache=v2,subvol=@pkg /dev/PATH_TO_ROOT /mnt/pkg
 
+# if on XFS just do
+$ mount /dev/PATH_TO_ROOT /mnt
+
 # mount the EFI
 $ mount /dev/PATH_TO_EFI /mnt/boot
 
@@ -116,7 +119,7 @@ Finally, is time to pacstrap core stuff.
 > best time to act like a wizard summoning an esoteric spell
 
 ```
-$ pacstrap /mnt amd-ucode base base-devel btrfs-progs git linux linux-firmware linux-headers linux-lts neovim networkmanager reflector sudo
+$ pacstrap /mnt amd-ucode base base-devel btrfs-progs git linux linux-firmware linux-headers linux-lts neovim networkmanager sudo
 ```
 
 Also generate the fstab entries.
@@ -206,7 +209,7 @@ options	root=/dev/PATH_TO_ROOT rw
 
 7. Get more packages.
 ```
-$ pacman -S --needed bluez bluez-utils efibootmgr nm-connection-editor snapper wpa_supplicant xdg-utils xdg-user-dirs
+$ pacman -S --needed bluez bluez-utils efibootmgr nm-connection-editor [snapper (if on btrfs only)] wpa_supplicant xdg-utils
 ```
 
 8. Enable networkmanager.
@@ -235,9 +238,63 @@ $ umount -a
 $ reboot
 ```
 
-8. pacman mirror
-9. acer-wmi-battery
+11. Config pacman.
+```
+$ EDITOR=nvim sudoedit /etc/pacman.conf
+```
+
+- find and uncomment the lines:
+
+```
+...
+Color
+ILoveCandy
+CheckSpace
+...
+```
+
+- enable parallel downloads
+
+```
+...
+ParallelDownloads = 50
+...
+```
+
+- enable multilib repo (for gaming)
+
+```
+...
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+...
+```
+
+- also edit the mirrorlist
+
+```
+$ EDITOR=nvim sudoedit /etc/pacman.d/mirrorlist
+```
+
+- add the following mirrors
+
+```
+Server = http://mirror.ufscar.br/archlinux/$repo/os/$arch
+Server = https://mirror.ufscar.br/archlinux/$repo/os/$arch
+Server = http://archlinux.c3sl.ufpr.br/$repo/os/$arch
+Server = https://archlinux.c3sl.ufpr.br/$repo/os/$arch
+Server = http://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
+Server = https://www.caco.ic.unicamp.br/archlinux/$repo/os/$arch
+Server = http://br.mirrors.cicku.me/archlinux/$repo/os/$arch
+Server = https://br.mirrors.cicku.me/archlinux/$repo/os/$arch
+Server = http://linorg.usp.br/archlinux/$repo/os/$arch
+Server = http://archlinux.pop-es.rnp.br/$repo/os/$arch
+Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
+Server = http://mirrors.ic.unicamp.br/archlinux/$repo/os/$arch
+Server = https://mirrors.ic.unicamp.br/archlinux/$repo/os/$arch
+```
 10. schedule fstrim
+11. acer-wmi-batteryz dxt
 11. Bluetooth
 12. Polkit
 13. multilib repo
@@ -248,8 +305,6 @@ $ reboot
 18. uwsm
 19. xdg-desktop-portal
 20. zathura
-21. zed
-22. ollama
 23. zen-browser & transparent-zen
 24. snapper snap-sync
 
