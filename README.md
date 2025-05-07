@@ -119,7 +119,7 @@ Finally, is time to pacstrap core stuff.
 > best time to act like a wizard summoning an esoteric spell
 
 ```
-$ pacstrap /mnt amd-ucode base base-devel btrfs-progs git linux linux-firmware linux-headers linux-lts neovim networkmanager sudo
+$ pacstrap /mnt amd-ucode base base-devel [btrfs-progs (if on btrfs)] linux linux-firmware linux-headers linux-lts neovim networkmanager sudo [xfsprogs (if on xfs)]
 ```
 
 Also generate the fstab entries.
@@ -164,7 +164,7 @@ KEYMAP=us
 3. Add btrfs module to kernel by editing /etc/mkinitcpio.conf.
 ```
 ...
-MODULES=(btrfs)
+MODULES=(btrfs) # or xfs
 ...
 ```
 - then run
@@ -209,7 +209,7 @@ options	root=/dev/PATH_TO_ROOT rw
 
 7. Get more packages.
 ```
-$ pacman -S --needed bluez bluez-utils efibootmgr nm-connection-editor [snapper (if on btrfs only)] wpa_supplicant xdg-utils
+$ pacman -S efibootmgr nm-connection-editor [snapper (if on btrfs only)] wpa_supplicant xdg-utils
 ```
 
 8. Enable networkmanager.
@@ -238,7 +238,12 @@ $ umount -a
 $ reboot
 ```
 
-11. Config pacman.
+11. Connect to the wifi again.
+```
+$ nmtui
+```
+
+12. Config pacman.
 ```
 $ EDITOR=nvim sudoedit /etc/pacman.conf
 ```
@@ -293,20 +298,68 @@ Server = http://mirror.ufam.edu.br/archlinux/$repo/os/$arch
 Server = http://mirrors.ic.unicamp.br/archlinux/$repo/os/$arch
 Server = https://mirrors.ic.unicamp.br/archlinux/$repo/os/$arch
 ```
-10. schedule fstrim
-11. acer-wmi-batteryz dxt
+
+- then refresh all mirrors
+
+```
+$ sudo pacman -Syyu
+```
+
+13. Schedule fstrim.
+
+- just enable the systemd timer
+
+```
+$ sudo systemctl enable fstrim.timer
+```
+
+14. Config git
+
+```
+$ sudo pacman -Syu git github-cli
+$ git config --global user.name "frvgmxntx"
+$ git config --global user.email "gnavelino@estudante.ufscar.br"
+$ gh auth login
+```
+
+15. Install AUR helper.
+
+```
+$ git clone https://aur.archlinux.org/paru.git
+$ cd paru && makepkg -si
+```
+
+- enable paru to clean after
+
+```
+$ EDITOR=nvim sudoedit /etc/paru.conf
+```
+
+- find and uncomment the line
+- 
+```
+...
+CleanAfter
+...
+```
+
+16. Get sound.
+
+```
+$ sudo pacman -Syu pipewire lib32-pipewire wireplumber pwvucontrol pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse
+
+```
+
+11. acer-wmi-battery
 11. Bluetooth
 12. Polkit
-13. multilib repo
 14. nvidia
-15. paru
 16. nbfc-linux
 17. hyprland
 18. uwsm
 19. xdg-desktop-portal
 20. zathura
-23. zen-browser & transparent-zen
-24. snapper snap-sync
+23. zen-browser & transparent-zen & nebula theme
 
 <h4 align="center"> Programs </h4>
 pacstrap
