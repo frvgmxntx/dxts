@@ -161,7 +161,7 @@ LANG=en_US.UTF-8
 KEYMAP=us
 ```
 
-3. Add btrfs module to kernel by editing /etc/mkinitcpio.conf.
+3. Add btrfs or xfs module to kernel by editing /etc/mkinitcpio.conf.
 ```
 ...
 MODULES=(btrfs) # or xfs
@@ -197,7 +197,7 @@ $ bootctl --path=/boot install
 timeout 0
 console-mode auto
 editor no
-default arch-*
+default @saved
 ```
 - create the /boot/loader/entries/arch.conf file
 ```
@@ -305,6 +305,26 @@ Server = https://mirrors.ic.unicamp.br/archlinux/$repo/os/$arch
 $ sudo pacman -Syyu
 ```
 
+- also it's a good idea to set a hook to update systemd-boot, to do so create the file in /etc/pacman.d/hooks/
+
+```
+$ EDITOR=nvim sudoedit /etc/pacman.d/hooks/95-systemd-boot.hook
+```
+
+- and add the following content
+
+```
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = systemd
+
+[Action]
+Description = Gracefully upgrading systemd-boot...
+When = PostTransaction
+Exec = /usr/bin/systemctl restart systemd-boot-update.service
+```
+
 13. Schedule fstrim.
 
 - just enable the systemd timer
@@ -346,26 +366,146 @@ CleanAfter
 16. Get sound.
 
 ```
-$ sudo pacman -Syu pipewire lib32-pipewire wireplumber pwvucontrol pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse
+$ sudo pacman -Syu pipewire lib32-pipewire wireplumber pwvucontrol pipewire-audio pipewire-alsa pipewire-jack pipewire-pulse && reboot
 
 ```
 
-11. acer-wmi-battery
-11. Bluetooth
-12. Polkit
-14. nvidia
-16. nbfc-linux
-17. hyprland
-18. uwsm
-19. xdg-desktop-portal
-20. zathura
-23. zen-browser & transparent-zen & nebula theme
+17. Get bluetooth.
+
+```
+$ sudo pacman -Syu bluez bluez-utils blueman
+$ sudo systemctl enable --now bluetooth.service
+```
+
+18. Setup fan control.
+
+- first install nbfc-linux from AUR
+
+```
+$ paru -Syu nbfc-linux
+```
+
+- then copy the configuration file from the repo to the config folder
+
+```
+$ cp dxts/nbfc/'Acer Nitro AN515-44.json' /usr/share/nbfc/configs
+```
+
+- apply the config and start the service
+
+```
+$ sudo nbfc config -a 'Acer Nitro AN515-44'
+```
+
+19. Setup battery charge limit.
+
+- compile the module
+
+```
+$ git clone https://github.com/frederik-h/acer-wmi-battery.git
+$ cd acer-wmi-battery && make
+```
+
+- copy the module to the loader directory
+
+```
+$ sudo mkdir /lib/modules/$(uname -r)/kernel/acer  
+$ cp acer-wmi-battery.ko /lib/modules/$(uname -r)/kernel/acer/
+```
+
+- create the module loader file
+
+```
+$ EDITOR=nvim sudoedit /etc/modules-load.d/acer-wmi-battery.conf
+```
+
+- add the following line
+
+```
+acer-wmi-battery
+```
+
+- create the modprobe file
+
+```
+$ EDITOR=nvim sudoedit /etc/modprobe.d/acer-wmi-battery.conf
+```
+
+- add the following line
+
+```
+options acer-wmi-battery enable_health_mode=1
+```
+
+- update kernel modules dependencies info
+
+```
+$ sudo depmod -a
+```
+
+20. Setup nvidia drivers (GTX 1650 Mobile / Max-Q | TU117).
+
+- get the drivers
+
+```
+$ sudo pacman -Syu nvidia-open nvidia-utils
+```
+
+> *yeah it's this simple.*
+
+21. Set auto login on tty.
+
+- create the auto auto login service for tty1
+
+```
+$ sudo mkdir /etc/systemd/system/getty@tty.service.d
+```
+
+- create an autologin.conf file
+
+```
+$ cd /etc/systemd/system/getty@tty.service.d
+$ EDITOR=nvim sudoedit autologin.conf
+```
+
+- add the following content
+
+```
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin frvg %I $TERM
+Type=simple
+```
+
+- also create the skip prompt file
+
+```
+$ EDITOR=nvim sudoedit skip-prompt.conf
+```
+
+- add the following content
+
+```
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --skip-login --nonewline --noissue --autologin frvg --noclear %I $TERM
+```
+
+22. Set quiet boot.
+
+- just add this parameters to /boot/loader/entries/*_linux.conf
+
+```
+...
+options	root=/dev/PATH_TO_ROOT rw quiet nowatchdogs loglevel=3 systemd.show_status=auto rd.udev.log_level=3
+...
+```
 
 <h4 align="center"> Programs </h4>
 pacstrap
-amd-ucode app2unit-git base-devel fish git kitty linux linux-firmware linux-lts neovim network-manager noto-fonts-emoji nvidia nvidia-utils pipewire pipewire-alsa pipewire-jack pipewire-pulse sudo uwsm
+app2unit-git fish kitty noto-fonts-emoji uwsm
 other
-7zip bat blueman bluez bluez-libs bluez-utils brightnessctl cava dart-sass fastfetch ffmpeg ffmpegthumbnailer file-roller gimp github-cli glances google-earth-pro gpu-screen-recorder grim gvfs hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nbfc-linux nm-connection-editor ollama poppler pwvucontrol python qbittorrent rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tree-sitter ttf-firacode-nerd tumbler tumbler-extra-thumbnailers udiskie unrar vesktop-bin walker-bin wine winetricks wireplumber wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zed zen-browser-bin zoxide
+7zip bat brightnessctl cava dart-sass fastfetch ffmpeg ffmpegthumbnailer file-roller gimp glances google-earth-pro gpu-screen-recorder grim gvfs hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nm-connection-editor ollama poppler python qbittorrent rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tree-sitter ttf-firacode-nerd tumbler tumbler-extra-thumbnailers udiskie unrar vesktop-bin walker-bin wine winetricks wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zed zen-browser-bin zoxide
 
 
 
@@ -373,7 +513,16 @@ other
 
 <summary><h3 align="center"> 💻 Terminal & Shell </h3></summary>
 
+<details>
+
 <summary><h3 align="center"> 💧 Hyprland </h3></summary>
+
+17. hyprland
+18. Polkit
+18. uwsm
+19. xdg-desktop-portal
+
+</details>
 
 <summary><h3 align="center"> 🎨 Matugen </h3></summary>
 
