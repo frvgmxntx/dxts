@@ -356,7 +356,7 @@ $ EDITOR=nvim sudoedit /etc/paru.conf
 ```
 
 - find and uncomment the line
-- 
+
 ```
 ...
 CleanAfter
@@ -493,7 +493,7 @@ ExecStart=-/usr/bin/agetty --skip-login --nonewline --noissue --autologin frvg -
 
 22. Set quiet boot.
 
-- just add this parameters to /boot/loader/entries/*_linux.conf
+- just add these parameters to /boot/loader/entries/*_linux.conf
 
 ```
 ...
@@ -501,17 +501,99 @@ options	root=/dev/PATH_TO_ROOT rw quiet nowatchdogs loglevel=3 systemd.show_stat
 ...
 ```
 
+22. Finish getting some needed programs.
+
+```
+$ paru -Syu 7zip ffmpeg glances gvfs imagemagick lutris nm-connection-editor python qbittorrent torzu-git udiskie vesktop-bin walker-bin wine winetricks
+```
+
 <h4 align="center"> Programs </h4>
-pacstrap
+
+
 app2unit-git fish kitty noto-fonts-emoji uwsm
 other
-7zip bat brightnessctl cava dart-sass fastfetch ffmpeg ffmpegthumbnailer file-roller gimp glances google-earth-pro gpu-screen-recorder grim gvfs hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nm-connection-editor ollama poppler python qbittorrent rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tree-sitter ttf-firacode-nerd tumbler tumbler-extra-thumbnailers udiskie unrar vesktop-bin walker-bin wine winetricks wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zed zen-browser-bin zoxide
 
-
+brightnessctl cava dart-sass fastfetch ffmpegthumbnailer file-roller gimp gpu-screen-recorder grim hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nm-connection-editor ollama poppler rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tumbler tumbler-extra-thumbnailers vesktop-bin wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zed zen-browser-bin zoxide
 
 </details>
 
+<details>
+
 <summary><h3 align="center"> 💻 Terminal & Shell </h3></summary>
+
+> caution with the sea, we gonna go *fishing...*
+
+1. Get bat, eza, fish, fzf, qalc and zoxide.
+
+```
+$ sudo pacman -Syu bat eza fish fzf qalc zoxide
+```
+
+2. Set default shell.
+
+- check shell paths
+
+```
+$ chsh -l
+```
+
+- set fish as default
+
+```
+$ chsh -s /usr/bin/fish
+```
+
+- disable fish greeting
+
+```
+$ set -U fish_greeting
+```
+
+- make `su` use fish too, create the file `~/.config/fish/functions/su.fish` and add the following
+
+```
+function su
+	command su --shell/usr/bin/fish $argv
+end
+```
+
+- create the necessary alias
+
+```
+$ alias -s cat 'bat'
+$ alias -s cd 'z'
+$ alias -s del 'gio trash'
+$ alias -s ff 'fastfetch'
+$ alias -s icat 'sudo kitten icat'
+$ alias -s ls 'eza --long --color=always --icons=always -a'
+$ alias -s lt 'eza --tree --color=always --icons=always -a'
+$ alias -s nv 'nvim'
+$ alias -s pac 'paru -Syu'
+$ alias -s snv 'EDITOR=nvim sudoedit'
+```
+
+- add `fzf` and `zoxide` to fish, by appending this line to `~/.config/fish/config.fish`
+
+```
+...
+fzf --fish | source
+zoxide init fish | source
+...
+```
+
+- set a prompt on fish
+
+```
+$ fish_config
+```
+
+kitty
+neovim kickstart
+neovim neorg
+luarocks
+tree-sitter
+
+</details>
 
 <details>
 
