@@ -12,7 +12,7 @@
 <h1 align="center"> ✨ Introduction ✨ </h1>
 This repository contains my <em>personal</em> daily driver setup, customized for a balance between aesthetics and usability. The focus is on creating a smooth, visually appealing experience with glass-like transparency effects and dynamic theming. While built around my own workflow, it's open for anyone who enjoys a polished and fluid environment. Feel free to fork or open a pull request!
 
-> 10% functionality, 90% vibes ✌️.
+> powered by caffeine ☕.
 
 <summary><h2 align="center"> 📋 Overview </h2></summary>
 
