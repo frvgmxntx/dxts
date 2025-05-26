@@ -587,11 +587,37 @@ zoxide init fish | source
 $ fish_config
 ```
 
-kitty
+3. Set up Hyprland then come back to configure kitty.
+
+- install kitty
+```
+$ sudo pacman -Syu kitty
+```
+
+- get the config files from dxts/kitty
+```
+
+```
+
+- include the files by appending this to the config file
+```
+
+```
+
+4. Set Neovim
+
+- copy the starter config
+
+- add plugins, first install dependencies
+```
+$ sudo pacman -Syu luarocks tree-sitter
+```
+
 neovim kickstart
 neovim neorg
-luarocks
-tree-sitter
+neovim lualine
+neovim pywal16
+neovim colorizer
 
 </details>
 
@@ -599,18 +625,69 @@ tree-sitter
 
 <summary><h3 align="center"> 💧 Hyprland </h3></summary>
 
-17. hyprland
-18. Polkit
-18. uwsm
-19. xdg-desktop-portal
+1. Get Hyprland and friends
+```
+$ sudo pacman -Syu hyprland
+```
+
+2. Then just follow the wiki
+https://wiki.hyprland.org/Getting-Started/
+
+- monitor
+- env vars in uwsm
+- animations
+- binds (change uwsm to app2unit)
+- decorations
+- inputs
+- startup
+- window-rules
+- scripts
+
+3. To set uwsm
+
+- install uwsm
+```
+$ sudo pacman -Syu uwsm libnewt app2unit-git
+```
+
+- append to `config.fish` the autostart
+```
+...
+if uwsm check may-start
+	exec uwsm start hyprland.desktop
+end
+...
+```
+
+- add app2unit env var to faster startups, in `~/.config/uwsm/env`
+```
+...
+APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
+...
+```
 
 </details>
 
 <summary><h3 align="center"> 🎨 Matugen </h3></summary>
 
+<details>
+
 <summary><h3 align="center"> 🧰 Waybar </h3></summary>
 
+1. Get waybar
+```
+$ sudo pacman -Syu waybar
+```
+
+</details>
+
+<details>
+
 <summary><h3 align="center"> 🍃 Zen Browser </h3></summary>
+
+- nebula theme, remove gray dim when out of focus, add zen internet / transparency, enable transparency
+
+</details>
 
 <summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
 
@@ -643,3 +720,5 @@ tree-sitter
 </h4>
 
 > shoutout to the giants whose shoulders I'm standing on 🙏.
+
+
