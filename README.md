@@ -520,7 +520,7 @@ brightnessctl cava dart-sass fastfetch ffmpegthumbnailer file-roller gimp gpu-sc
 
 <summary><h3 align="center"> 💻 Terminal & Shell </h3></summary>
 
-> caution with the sea, we gonna go *fishing...*
+> caution with the sea 🐟*
 
 1. Get bat, eza, fish, fzf, qalc and zoxide.
 
@@ -539,7 +539,7 @@ $ chsh -l
 - set fish as default
 
 ```
-$ chsh -s /usr/bin/fish
+$ chsh -s /usr/bin/fish # or path shown by chsh
 ```
 
 - disable fish greeting
@@ -607,7 +607,7 @@ $ sudo pacman -Syu kitty
 
 - copy the starter config
 
-- add plugins, first install dependencies
+- add plugins. First install dependencies
 ```
 $ sudo pacman -Syu luarocks tree-sitter
 ```
@@ -707,12 +707,20 @@ $ paru -Syu zen-browser
 3. Disable dimming when out of focus and check transparency status
 
 - go to the [about config page](about:config), change
-`zen.view.grey-out-inactive-windows` to `false`. Also make sure that `zen.widget.linux.transparency` and `browser.tabs.allow_transparent_browser` are both set to `true`.
+`zen.view.grey-out-inactive-windows` to `false`. Also, make sure that `zen.widget.linux.transparency` and `browser.tabs.allow_transparent_browser` are both set to `true`.
 
 
 </details>
 
+<details>
+
 <summary><h3 align="center"> 🖼️ GTK & QT Themes </h3></summary>
+
+> being honest this is the hardest step
+
+1. 
+
+</details>
 
 <h1 align="center"> ✨ Showcase ✨ </h1>
 
