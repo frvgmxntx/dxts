@@ -504,16 +504,15 @@ options	root=/dev/PATH_TO_ROOT rw quiet nowatchdogs loglevel=3 systemd.show_stat
 22. Finish getting some needed programs.
 
 ```
-$ paru -Syu 7zip ffmpeg glances gvfs imagemagick lutris nm-connection-editor python qbittorrent torzu-git udiskie vesktop-bin walker-bin wine winetricks
+$ paru -Syu 7zip ffmpeg fuzzel glances gvfs imagemagick lutris nm-connection-editor python qbittorrent torzu-git udiskie vesktop-bin wine winetricks
 ```
 
-<h4 align="center"> Programs </h4>
 
+other stuff wip
 
-app2unit-git fish kitty noto-fonts-emoji uwsm
-other
+kitty noto-fonts-emoji
 
-brightnessctl cava dart-sass fastfetch ffmpegthumbnailer file-roller gimp gpu-screen-recorder grim hyprland hyprlock hyprpicker hyprpolkitagent imagemagick lutris mako matugen-bin mpv nm-connection-editor ollama poppler rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tumbler tumbler-extra-thumbnailers vesktop-bin wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zed zen-browser-bin zoxide
+brightnessctl cava dart-sass fastfetch ffmpegthumbnailer file-roller gimp gpu-screen-recorder grim hyprland hyprlock hyprpicker hyprpolkitagent mako mpv nm-connection-editor ollama poppler rnote satty slurp swww-git thunar thunar-archive-plugin thunar-media-tags-plugin thunar-vcs-plugin thunar-volman torzu-git tumbler tumbler-extra-thumbnailers wl-clipboard xdg-desktop-portal-hyprland yt-dlp zathura zathura-cb zathura-pdf-poppler zathura-ps zed
 
 </details>
 
@@ -668,13 +667,22 @@ APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-gr
 
 </details>
 
+<details>
+
 <summary><h3 align="center"> 🎨 Matugen </h3></summary>
+
+1. Get Matugen
+```
+$ paru -Syu matugen
+```
+
+</details>
 
 <details>
 
 <summary><h3 align="center"> 🧰 Waybar </h3></summary>
 
-1. Get waybar
+1. Get Waybar
 ```
 $ sudo pacman -Syu waybar
 ```
@@ -685,7 +693,22 @@ $ sudo pacman -Syu waybar
 
 <summary><h3 align="center"> 🍃 Zen Browser </h3></summary>
 
-- nebula theme, remove gray dim when out of focus, add zen internet / transparency, enable transparency
+1. Get Zen
+```
+$ paru -Syu zen-browser
+```
+
+2. Install mods
+
+- get both [Transparent Zen](https://zen-browser.app/mods/642854b5-88b4-4c40-b256-e035532109df/) and [Zen Internet](https://addons.mozilla.org/en-US/firefox/addon/zen-internet/)
+
+- don't forget to enable transparency on Transparent Zen configuration, and to sync the latest themes on Zen Internet addon menu
+
+3. Disable dimming when out of focus and check transparency status
+
+- go to the [about config page](about:config), change
+`zen.view.grey-out-inactive-windows` to `false`. Also make sure that `zen.widget.linux.transparency` and `browser.tabs.allow_transparent_browser` are both set to `true`.
+
 
 </details>
 
