@@ -568,6 +568,7 @@ $ alias -s ls 'eza --long --color=always --icons=always -a'
 $ alias -s lt 'eza --tree --color=always --icons=always -a'
 $ alias -s nv 'nvim'
 $ alias -s pac 'paru -Syu'
+$ alias -s pyv 'source ./.venv/bin/activate.fish' 
 $ alias -s snv 'EDITOR=nvim sudoedit'
 ```
 
