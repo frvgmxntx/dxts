@@ -14,12 +14,12 @@
 }
 
 #battery.mid {
-  color: alpha(@tertiary, 0.5);
+  color: alpha(@tertiary_fixed_dim, 0.5);
   transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
 }
 
 #battery.mid:hover {
-  color: alpha(@tertiary, 1);
+  color: alpha(@tertiary_fixed_dim, 1);
   transition: all 0.3s cubic-bezier(0.77,0.00,0.175,1.00);
 }
 

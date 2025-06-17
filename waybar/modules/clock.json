@@ -2,7 +2,7 @@
   "clock": {
     "interval": 60,
     "format": "{:%H | %M}",
-    "format-alt": "{:%a %d %m %Y}",
+    "format-alt": "{:%a, %d de %B de %Y}",
     "tooltip": false,
   }
 }

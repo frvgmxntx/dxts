@@ -1,42 +1,26 @@
-set fish_color_autosuggestion 8c9195
-set fish_color_cancel -r
-set fish_color_command b1cbd6
-set fish_color_comment 8c9195
-set fish_color_cwd green
-set fish_color_cwd_root red
-set fish_color_end e7bea5
-set fish_color_error ffb4ab
-set fish_color_escape 8c9195
-set fish_color_history_current --bold
-set fish_color_host normal
-set fish_color_host_remote yellow
-set fish_color_keyword b1cbd6
-set fish_color_match e7bea5
-set fish_color_normal normal
-set fish_color_operator e7bea5
-set fish_color_option 4a626c
-set fish_color_param 4a626c
-set fish_color_quote bfc8cd
-set fish_color_redirection 4a626c
-
-
-set fish_color_search_match 'bryellow'  '--background=brblack'
-set fish_color_selection 'white'  '--bold'  '--background=brblack'
-set fish_color_status red
-set fish_color_user brgreen
-set fish_color_valid_path --underline
-
-
-set fish_pager_color_background
-set fish_pager_color_completion normal
-set fish_pager_color_description 'B3A06D'  'yellow'
-set fish_pager_color_prefix 'normal'  '--bold'  '--underline'
-set fish_pager_color_progress 'brwhite'  '--background=cyan'
-set fish_pager_color_secondary_background
-set fish_pager_color_secondary_completion
-set fish_pager_color_secondary_description
-set fish_pager_color_secondary_prefix
-set fish_pager_color_selected_background --background=brblack
-set fish_pager_color_selected_completion
-set fish_pager_color_selected_description
-set fish_pager_color_selected_prefix
+fish_color_normal e3e3dc
+fish_color_command acd194
+fish_color_param f8b2d9
+fish_color_keyword ffd8eb
+fish_color_quote e3e3dc
+fish_color_redirection f8b2d9
+fish_color_end bcccae
+fish_color_comment e3e3dc
+fish_color_error ffb4ab
+fish_color_gray 383a35
+fish_color_selection --background=313244
+fish_color_search_match --background=313244
+fish_color_option acd194
+fish_color_operator e5a2c7
+fish_color_escape 360928
+fish_color_autosuggestion e3e3dc
+fish_color_cancel e3e3dc
+fish_color_cwd e3e3dc
+fish_color_user e3e3dc
+fish_color_host e3e3dc
+fish_color_host_remote e3e3dc
+fish_color_status e3e3dc
+fish_pager_color_progress acd194
+fish_pager_color_prefix e3e3dc
+fish_pager_color_completion c3c8bb
+fish_pager_color_description acd194

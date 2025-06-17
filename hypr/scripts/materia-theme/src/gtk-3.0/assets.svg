@@ -25,23 +25,23 @@
     </linearGradient>
 
     <linearGradient id="dark-theme-surface-z0">
-      <stop offset="1" stop-color="#1b343d"/>
+      <stop offset="1" stop-color="#19370a"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-surface-z8">
-      <stop offset="1" stop-color="#121314"/>
+      <stop offset="1" stop-color="#121410"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-disabled-hint-on-surface">
-      <stop offset="1" stop-color="#e3e2e3" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#e3e3dc" stop-opacity=".26"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-primary">
-      <stop offset="1" stop-color="#b1cbd6"/>
+      <stop offset="1" stop-color="#acd194"/>
     </linearGradient>
 
     <linearGradient id="dark-theme-on-primary">
-      <stop offset="1" stop-color="#121314"/>
+      <stop offset="1" stop-color="#121410"/>
     </linearGradient>
 
     <g id="base-scale-slider">

@@ -45,7 +45,9 @@ echo -e '[templates.material-gtk-theme-color]'
 # [templates.gtk-archdroid-icons]
 source /home/frvg/.config/hypr/scripts/archdroid-icon-theme/color.sh
 cd /home/frvg/.config/hypr/scripts/archdroid-icon-theme/
-/home/frvg/.config/hypr/scripts/archdroid-icon-theme/change_color.sh -o archdroid -c "$COLOR" > /dev/null 2>&1 && gtk-update-icon-cache -f -t -i ~/.local/share/icons/archdroid-icon-theme/ > /dev/null 2>&1
+/home/frvg/.config/hypr/scripts/archdroid-icon-theme/change_color.sh -o archdroid -c "$COLOR" > /dev/null 2>&1 && gtk-update-icon-cache -f -t -i ~/.icons/archdroid/ > /dev/null 2>&1
+
+# ~/.local/share/icons/archdroid-icon-theme/ ??
 
 theme=$(gsettings get org.gnome.desktop.interface gtk-theme)
 gsettings set org.gnome.desktop.interface gtk-theme '' && gsettings set org.gnome.desktop.interface gtk-theme $theme

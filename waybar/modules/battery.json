@@ -3,7 +3,7 @@
     "format": "{icon}",
     "format-icons": ["","","","",""],
     "states": {
-      "mid": 30,
+      "mid": 50,
       "low": 10,
     },
     "tooltip": false,
@@ -12,6 +12,8 @@
   "battery#charge": {
     "format-discharging": "{capacity}%",
     "format-charging": "{capacity}% ",
+    "format-pending-charging": "{capacity}% ",
+    "full-at": 79,
     "tooltip": false,
   },
 

@@ -1,0 +1,54 @@
+#██▀ █▄ █ █ █   █ █ ▄▀▄ █▀▄ ▄▀▀
+#█▄▄ █ ▀█ ▀▄▀   ▀▄▀ █▀█ █▀▄ ▄██
+
+# cursor
+export XCURSOR_THEME="Vimix Cursors - White"
+export XCURSOR_SIZE=12
+export WLR_NO_HARDWARE_CURSORS=1
+
+# editor
+export EDITOR=nvim
+
+# electron apps
+export ELECTRON_ARGS="--enable-features=UseOzonePlatform --ozone-platform=wayland"
+
+# gtk
+export GDK_BACKEND=wayland,x11,*
+
+# kitty
+export TERM=xterm-kitty
+
+# nvidia
+export LIBVA_DRIVER_NAME=nvidia
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export NVD_BACKEND=direct
+export WLR_DRM_NO_ATOMIC=1
+
+#export __NV_PRIME_RENDER_OFFLOAD,1
+export __VK_LAYER_NV_optimus=NVIDIA_only
+export MOZ_DISABLE_RDD_SANDBOX=1
+
+# qt
+#export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLE_OVERRIDE=kvantum
+#export QT_QPA_PLATFORMTHEME=gtk3
+export KRITA_NO_STYLE_OVERRIDE=1
+#export GTK_THEME=Materia-dark
+#export QT_STYLE_OVERRIDE=qt5ct
+
+# toolkit
+export SDL_VIDEODRIVER=wayland
+
+# uwsm
+export APP2UNIT_SLICES='a=app-graphical.slice b=background-graphical.slice s=session-graphical.slice'
+
+# xdg
+#export XDG_CURRENT_DESKTOP=Hyprland
+#export XDG_SESSION_TYPE=wayland
+#export XDG_SESSION_DESKTOP=Hyprland
+
+

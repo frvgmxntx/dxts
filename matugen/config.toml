@@ -11,7 +11,7 @@ arguments = ["--wallpaper $wallpaper"]
 set = false
 
 [config.custom_keywords]
-fontfcnf = "FiraCode Nerd Font"
+fontfcnf = "Maple Mono NF"
 
 [templates.avatar]
 input_path = './templates/avatar.svg'
@@ -24,6 +24,10 @@ output_path = '~/.config/cava/config'
 [templates.fish]
 input_path = './templates/colors-fish.theme'
 output_path = '~/.config/fish/themes/Matugen.theme'
+
+[templates.ghostwriter]
+input_path = './templates/colors-ghostwriter.json'
+output_path = '~/.local/share/ghostwriter/themes/matugen.json'
 
 [templates.gtk-archdroid-icons]
 input_path = './templates/colors-gtk-icons.sh'
