@@ -9,7 +9,11 @@
 <img src="https://img.shields.io/badge/Made%20With-Love-EB5E55?style=flat-square&logo=macys&logoColor=ffffff" alt="Made with" />
 </div>
 
+<div align="center">
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Gamja+Flower&size=50&pause=1000&color=000000&center=true&vCenter=true&width=450&height=70&lines=Welcome+%2Fhome%2F%24USER+!)](https://git.io/typing-svg)
+
+</div>
 
 <h1 align="center"> ✨ Introduction ✨ </h1>
 This repository contains my <em>personal</em> setup, customized to work on an IC project. 
