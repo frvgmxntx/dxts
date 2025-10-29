@@ -8,7 +8,8 @@
 
 <div align="center">
 
-[![OS Version](https://badgen.net/badge/󰣨/gentoo/purple)](https://www.gentoo.org/)
+[![OS Version](https://badgen.net/badge/OS/gentoo/purple)](https://www.gentoo.org/)
+[![WM Version](https://badgen.net/badge/WM/hyprland/cyan)](hypr.land)
 
 </div>
 
