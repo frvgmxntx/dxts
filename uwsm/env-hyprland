@@ -1,6 +1,0 @@
-#██▀ █▄ █ █ █   █ █ ▄▀▄ █▀▄ ▄▀▀
-#█▄▄ █ ▀█ ▀▄▀   ▀▄▀ █▀█ █▀▄ ▄██
-
-# cursor
-#export HYPRCURSOR_THEME = Vimix Cursor White
-export HYPRCURSOR_SIZE=12
