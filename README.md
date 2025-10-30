@@ -15,7 +15,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Gamja+Flower&size=50&pause=1000&color=000000&background=FFFFFF&center=true&vCenter=true&width=435&height=55&lines=Welcome+%2Fhome%2F%24USER.)](https://git.io/typing-svg)
+<h1 align="center"><b>Welcome /home/$USER.</b></h1>
 
 </div>
 
