@@ -6,7 +6,7 @@
 
 <div align="center">
 
-![Header](https://capsule-render.vercel.app/api?type=cylinder&height=300&color=4A148C&text=frvg's%20.s!&section=header&reversal=false&textBg=false&fontColor=F5F5F5&fontSize=70&fontAlignY=56)
+![Header](https://capsule-render.vercel.app/api?type=cylinder&height=200&color=4A148C&text=frvg's%20.s!&section=header&reversal=false&textBg=false&fontColor=F5F5F5&fontSize=70&fontAlignY=61)
 
 </div>
 
