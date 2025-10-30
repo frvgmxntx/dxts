@@ -1,11 +1,5 @@
 <div align="center">
 
-<img alt="Avatar Icon" src="assets/avatar.png" width="200" height="200"/>
-
-</div>
-
-<div align="center">
-
 ![Header](https://capsule-render.vercel.app/api?type=cylinder&height=200&color=4A148C&text=frvg's%20.s!&section=header&reversal=false&textBg=false&fontColor=F5F5F5&fontSize=70&fontAlignY=61)
 
 </div>
