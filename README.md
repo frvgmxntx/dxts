@@ -8,8 +8,10 @@
 
 <div align="center">
 
-[![OS Version](https://badgen.net/badge/OS/gentoo/purple)](https://www.gentoo.org/)
-[![WM Version](https://badgen.net/badge/WM/hyprland/cyan)](hypr.land)
+[![OS - gentoo](https://img.shields.io/badge/OS-gentoo-9575CD?style=for-the-badge&logo=gentoo&logoColor=white)](https://www.gentoo.org/)
+[![WM - hyprland](https://img.shields.io/badge/WM-hyprland-4FC3F7?style=for-the-badge&logo=hyprland&logoColor=white)](https://hypr.land/)
+[![Colorgen - matugen](https://img.shields.io/badge/Colorgen-matugen-F06292?style=for-the-badge&logo=material+design&logoColor=white)](https://github.com/InioX/matugen)
+[![Shell - fish](https://img.shields.io/badge/Shell-fish-81C784?style=for-the-badge&logo=fish+shell&logoColor=white)](https://fishshell.com/)
 
 </div>
 
@@ -20,7 +22,7 @@
 </div>
 
 <h1 align="center"> ✨ Introduction ✨ </h1>
-This repository contains my <em>personal</em> setup, customized to work on an IC project. 
+This repository contains my <em>personal</em> setup, made to daily drive my current laptop. 
 
 > powered by caffeine ☕.
 
